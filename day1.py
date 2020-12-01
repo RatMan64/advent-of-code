@@ -4,6 +4,7 @@
 
 file  = open("input.txt", mode='r', encoding="utf-8-sig" )
 lines = file.readlines()
+file.close()
 
 def find2020two(list):
 
