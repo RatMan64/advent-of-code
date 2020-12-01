@@ -14,7 +14,12 @@ def find2020two(list):
 
 
 def find2020three(list):
-    for i in range(len(list))
+    for i in range(len(list)):
+        for j in range(len(list)):
+            for b in range(len(list)):
+                if int(list[i])+ int(list[j]) + int(list[b]) == 2020:
+                    return int(list[i])* int(list[j]) * int(list[b])
 
 
 print(find2020two(lines))
+print(find2020three(lines))
