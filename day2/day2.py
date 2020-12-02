@@ -12,15 +12,14 @@ def howManyAreAcceptable(list):
         array = line.split()
         letterparamater =array[1][0]
         paramaters = array[0].split("-")
-        lowerparamater = paramaters[0]
-        uperparamater =paramaters[1]
-        lettercount = 0
-        for letter in array[2]:
-            if letter == letterparamater:
-                lettercount +=1
-
-        if lettercount >= int(lowerparamater) and lettercount <= int(uperparamater):
+        lowerparamater = int(paramaters[0])
+        uperparamater =int(paramaters[1])
+        if array[2][lowerparamater-1] == letterparamater and array[2][uperparamater-1] == letterparamater:
+            continue
+        elif array[2][lowerparamater-1] == letterparamater or array[2][uperparamater-1] == letterparamater:
             count += 1
+
+
     return count
 
 
